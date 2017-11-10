@@ -5,14 +5,15 @@
   "main": "server.js",
   "author": "Scotch",
   "dependencies": {
+    "applicationinsights": "^1.0.0",
     "body-parser": "^1.18.2",
-    "mongoose": "4.10.8",
     "express": "^4.10.8",
     "method-override": "^2.3.10",
+    "mongoose": "4.10.8",
     "morgan": "^1.9.0"
   },
   "engines": {
     "node": "6.9.1",
     "npm": "3.10.8"
-}
+  }
 }
