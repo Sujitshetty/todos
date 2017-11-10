@@ -7,7 +7,8 @@ var database = require('./config/database'); 			// load the database config
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
-
+var websiteName = process.env.WEBSITE_SITE_NAME;
+var instanceId = process.env.WEBSITE_INSTANCE_ID;
 // configuration ===============================================================
 mongoose.connect(database.remoteUrl); 	// Connect to local MongoDB instance. A remoteUrl is also available (modulus.io)
 
@@ -25,3 +26,4 @@ require('./app/routes.js')(app);
 // listen (start app with node server.js) ======================================
 app.listen(port);
 console.log("App listening on port " + port);
+console.log(process.env);
